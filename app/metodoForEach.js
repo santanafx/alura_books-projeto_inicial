@@ -1,8 +1,9 @@
-const elementoParaInserirLivros = document.getElementById('livros')
+const elementoParaInserirLivros = document.getElementById("livros");
 
 function exibirOsLivrosNaTela(listaDeLivros) {
-    listaDeLivros.forEach(livro => {
-        elementoParaInserirLivros.innerHTML += `
+  elementoParaInserirLivros.innerHTML = "";
+  listaDeLivros.forEach((livro) => {
+    elementoParaInserirLivros.innerHTML += `
         <div class="livro">
         <img class="livro__imagens" src="${livro.imagem}"
           alt="${livro.alt}" />
@@ -15,6 +16,6 @@ function exibirOsLivrosNaTela(listaDeLivros) {
           <span class="tag">${livro.categoria}</span>
         </div>
       </div>
-        `
-    })
+        `;
+  });
 }
